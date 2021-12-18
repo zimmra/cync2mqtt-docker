@@ -50,6 +50,7 @@ RUN apk add --no-cache git gcc libc-dev python3 bluez py3-pip py3-virtualenv py3
     ln -s /usr/lib/bashio/bashio /usr/bin/bashio && \
     mkdir /data && \
     chmod 777 /data /app /run && \
+    chmod +x /run/entrypoint.sh && \
     rm -f -r /tmp/*
 ENTRYPOINT ["/run/entrypoint.sh"]
 # CMD [ "/cync2mqtt/bin/cync2mqtt /config/cync2mqtt/cync_mesh.yaml" ]

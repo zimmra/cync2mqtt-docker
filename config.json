@@ -23,6 +23,6 @@
     ],
     "slug": "cync2mqtt",
     "upstream": "dev.1",
-    "url": "https://github.com/zimmra/cync2mqtt-docker",
+    "url": "https://github.com/zimmra/cync2mqtt-docker/tree/rgb-attempt",
     "version": "dev.1"
   }

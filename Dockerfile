@@ -22,10 +22,10 @@ RUN apk add --no-cache git python3 bluez py3-pip py3-virtualenv py3-setuptools p
     # esac && \
     pip3 install pyyaml==5.4.1 && \
     #curl -L -s "https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-overlay-${S6ARCH}.tar.gz" | tar zxf - -C / && \
-    mkdir -p /etc/fix-attrs.d && \
-    mkdir -p /etc/services.d && \
-    #cp -a /app/cync2mqtt/init/s6/* /etc/. && \
-    rm -Rf /app/cync2mqtt/init && \ 
+    # mkdir -p /etc/fix-attrs.d && \
+    # mkdir -p /etc/services.d && \
+    # #cp -a /app/cync2mqtt/init/s6/* /etc/. && \
+    # rm -Rf /app/cync2mqtt/init && \ 
     # case "${APKARCH}" in \
     #     x86_64) \
     #         RSSARCH="amd64";; \

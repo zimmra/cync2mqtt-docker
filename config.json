@@ -12,17 +12,10 @@
       "NET_ADMIN"
     ],
     "description": "Home Assistant Community Add-on for Cync Devices",
-    "map": [
-      "config:rw",
-      "share:rw"
-    ],
+    "map": ["config:rw", "share:rw"],
     "name": "cync2mqtt",
-    "options": {
-      "CONFIG_LOCATION": "/config/cync2mqtt/cync_mesh.yaml"
-    },
-    "schema": {
-      "CONFIG_LOCATION": "str"
-    },
+    "options": {},
+    "schema": {},
     "services": [
       "mqtt:need"
     ],

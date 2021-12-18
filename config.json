@@ -9,6 +9,8 @@
     "host_network": true,
     "full_access": true,
     "hassio_api": true,
+    "host_dbus": true,
+    "usb": true,
     "privileged": [
       "NET_ADMIN"
     ],

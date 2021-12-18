@@ -48,7 +48,7 @@ RUN apk add --no-cache git gcc libc-dev python3 bluez py3-pip py3-virtualenv py3
     mkdir /data && \
     chmod 777 /data /app /run && \
     rm -f -r /tmp/*
-ENTRYPOINT [ "/init" ]
+ENTRYPOINT [ "/root/venv/cync2mqtt/bin/cync2mqtt /config/cync2mqtt/cync_mesh.yaml" ]
 
 ARG BUILD_VERSION
 ARG BUILD_DATE

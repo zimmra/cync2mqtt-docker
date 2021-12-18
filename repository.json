@@ -1,0 +1,5 @@
+{
+  "name": "Home Assistant Community Add-on for Cync Devices",
+  "url": "https://github.com/zimmra/cync2mqtt-docker",
+  "maintainer": "Zimmra"
+}

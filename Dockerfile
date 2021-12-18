@@ -42,7 +42,7 @@ RUN apk add --no-cache git gcc libc-dev python3 bluez py3-pip py3-virtualenv py3
     #         exit 1;; \
     # esac && \
     mkdir /cync2mqtt && chmod 777 /cync2mqtt && \
-    python3 -mvenv /cync2mqtt && /cync2mqtt/bin/pip3 install git+https://github.com/zimmra/cync2mqtt/tree/rgb-fix-attempt.git && \
+    python3 -mvenv /cync2mqtt && /cync2mqtt/bin/pip3 install git+https://github.com/zimmra/cync2mqtt.git && \
     curl -J -L -o /tmp/bashio.tar.gz "https://github.com/hassio-addons/bashio/archive/v0.13.1.tar.gz" && \
     mkdir /tmp/bashio && \
     tar zxvf /tmp/bashio.tar.gz --strip 1 -C /tmp/bashio && \

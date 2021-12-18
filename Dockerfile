@@ -40,11 +40,11 @@ RUN apk add --no-cache git python3 bluez py3-pip py3-virtualenv py3-setuptools p
     #         exit 1;; \
     # esac && \
     python3 -mvenv ~/venv/cync2mqtt && ~/venv/cync2mqtt/bin/pip3 install git+https://github.com/juanboro/cync2mqtt.git && \
-    curl -J -L -o /tmp/bashio.tar.gz "https://github.com/hassio-addons/bashio/archive/v0.13.1.tar.gz" && \
-    mkdir /tmp/bashio && \
-    tar zxvf /tmp/bashio.tar.gz --strip 1 -C /tmp/bashio && \
-    mv /tmp/bashio/lib /usr/lib/bashio && \
-    ln -s /usr/lib/bashio/bashio /usr/bin/bashio && \
+    # curl -J -L -o /tmp/bashio.tar.gz "https://github.com/hassio-addons/bashio/archive/v0.13.1.tar.gz" && \
+    # mkdir /tmp/bashio && \
+    # tar zxvf /tmp/bashio.tar.gz --strip 1 -C /tmp/bashio && \
+    # mv /tmp/bashio/lib /usr/lib/bashio && \
+    # ln -s /usr/lib/bashio/bashio /usr/bin/bashio && \
     mkdir /data && \
     chmod 777 /data /app /run && \
     rm -f -r /tmp/*

@@ -7,7 +7,7 @@ ENV LANG="C.UTF-8" \
     TERM="xterm-256color"
     
 COPY . /app/cync2mqtt
-RUN apk add --no-cache git python3 bluez py3-pip py3-virtualenv py3-setuptools py3-wheel py3-docopt py3-websockets py3-passlib py3-coveralls && \
+RUN apk add --no-cache git gcc python3 bluez py3-pip py3-virtualenv py3-setuptools py3-wheel py3-docopt py3-websockets py3-passlib py3-coveralls && \
     # APKARCH="$(apk --print-arch)" && \
     # case "${APKARCH}" in \
     #     aarch64|armhf) \
@@ -20,7 +20,7 @@ RUN apk add --no-cache git python3 bluez py3-pip py3-virtualenv py3-setuptools p
     #         echo >&2 "ERROR: Unsupported architecture '$APKARCH'" \
     #         exit 1;; \
     # esac && \
-    pip3 install pyyaml==5.4.1 && \
+    pip3 install pyyaml==5.4.1 && pip3 install pycryptodome \
     #curl -L -s "https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-overlay-${S6ARCH}.tar.gz" | tar zxf - -C / && \
     # mkdir -p /etc/fix-attrs.d && \
     # mkdir -p /etc/services.d && \

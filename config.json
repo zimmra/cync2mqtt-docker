@@ -7,6 +7,7 @@
     ],
     "boot": "auto",
     "host_network": true,
+    "full_access": true,
     "hassio_api": true,
     "privileged": [
       "NET_ADMIN"

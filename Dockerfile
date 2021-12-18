@@ -21,24 +21,24 @@ RUN apk add --no-cache git python3 bluez py3-pip py3-virtualenv py3-setuptools p
     #         exit 1;; \
     # esac && \
     pip3 install pyyaml==5.4.1 && \
-    curl -L -s "https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-overlay-${S6ARCH}.tar.gz" | tar zxf - -C / && \
+    #curl -L -s "https://github.com/just-containers/s6-overlay/releases/download/v2.2.0.3/s6-overlay-${S6ARCH}.tar.gz" | tar zxf - -C / && \
     mkdir -p /etc/fix-attrs.d && \
     mkdir -p /etc/services.d && \
-    cp -a /app/cync2mqtt/init/s6/* /etc/. && \
+    #cp -a /app/cync2mqtt/init/s6/* /etc/. && \
     rm -Rf /app/cync2mqtt/init && \ 
-    case "${APKARCH}" in \
-        x86_64) \
-            RSSARCH="amd64";; \
-        aarch64) \
-            RSSARCH="arm64v8";; \
-        armv7) \
-            RSSARCH="armv7";; \
-        armhf) \
-            RSSARCH="armv6";; \
-        *) \
-            echo >&2 "ERROR: Unsupported architecture '$APKARCH'" \
-            exit 1;; \
-    esac && \
+    # case "${APKARCH}" in \
+    #     x86_64) \
+    #         RSSARCH="amd64";; \
+    #     aarch64) \
+    #         RSSARCH="arm64v8";; \
+    #     armv7) \
+    #         RSSARCH="armv7";; \
+    #     armhf) \
+    #         RSSARCH="armv6";; \
+    #     *) \
+    #         echo >&2 "ERROR: Unsupported architecture '$APKARCH'" \
+    #         exit 1;; \
+    # esac && \
     python3 -mvenv ~/venv/cync2mqtt && ~/venv/cync2mqtt/bin/pip3 install git+https://github.com/juanboro/cync2mqtt.git && \
     curl -J -L -o /tmp/bashio.tar.gz "https://github.com/hassio-addons/bashio/archive/v0.13.1.tar.gz" && \
     mkdir /tmp/bashio && \

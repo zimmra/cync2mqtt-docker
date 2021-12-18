@@ -7,6 +7,7 @@ ENV LANG="C.UTF-8" \
     TERM="xterm-256color"
     
 COPY . /app/cync2mqtt
+VOLUME [ "/config" ]
 RUN apk add --no-cache git gcc libc-dev python3 bluez py3-pip py3-virtualenv py3-setuptools py3-wheel py3-docopt py3-websockets py3-passlib py3-coveralls py3-pycryptodome curl && \
     # APKARCH="$(apk --print-arch)" && \
     # case "${APKARCH}" in \
@@ -49,8 +50,9 @@ RUN apk add --no-cache git gcc libc-dev python3 bluez py3-pip py3-virtualenv py3
     mkdir /data && \
     chmod 777 /data /app /run && \
     rm -f -r /tmp/*
- #CMD [ "/cync2mqtt/bin/cync2mqtt /config/cync2mqtt/cync_mesh.yaml" ]
-CMD [ "/cync2mqtt/bin/cync2mqtt" ]
+
+CMD [ "/cync2mqtt/bin/cync2mqtt /config/cync2mqtt/cync_mesh.yaml" ]
+# CMD [ "/cync2mqtt/bin/cync2mqtt" ]
 
 ARG BUILD_VERSION
 ARG BUILD_DATE

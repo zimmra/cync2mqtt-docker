@@ -39,7 +39,8 @@ RUN apk add --no-cache git gcc libc-dev python3 bluez py3-pip py3-virtualenv py3
     #         echo >&2 "ERROR: Unsupported architecture '$APKARCH'" \
     #         exit 1;; \
     # esac && \
-    python3 -mvenv ~/venv/cync2mqtt && ~/venv/cync2mqtt/bin/pip3 install git+https://github.com/juanboro/cync2mqtt.git && \
+    mkdir /cync2mqtt && chmod 777 /cync2mqtt && \
+    python3 -mvenv /cync2mqtt && /cync2mqtt/bin/pip3 install git+https://github.com/juanboro/cync2mqtt.git && \
     curl -J -L -o /tmp/bashio.tar.gz "https://github.com/hassio-addons/bashio/archive/v0.13.1.tar.gz" && \
     mkdir /tmp/bashio && \
     tar zxvf /tmp/bashio.tar.gz --strip 1 -C /tmp/bashio && \
@@ -48,7 +49,7 @@ RUN apk add --no-cache git gcc libc-dev python3 bluez py3-pip py3-virtualenv py3
     mkdir /data && \
     chmod 777 /data /app /run && \
     rm -f -r /tmp/*
-# CMD [ "/root/venv/cync2mqtt/bin/cync2mqtt /config/cync2mqtt/cync_mesh.yaml" ]
+ CMD [ "/cync2mqtt/bin/cync2mqtt /config/cync2mqtt/cync_mesh.yaml" ]
 
 ARG BUILD_VERSION
 ARG BUILD_DATE

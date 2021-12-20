@@ -22,7 +22,7 @@
       "mqtt:need"
     ],
     "slug": "cync2mqtt",
-    "upstream": "dev.8",
+    "upstream": "dev.9",
     "url": "https://github.com/zimmra/cync2mqtt-docker",
-    "version": "dev.8"
+    "version": "dev.9"
   }

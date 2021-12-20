@@ -4,7 +4,7 @@ Description=cync2mqtt
 After=network.target
 
 [Service]
-ExecStart=/cync2mqtt/bin/cync2mqtt /config/cync2mqtt/cync_mesh.yaml
+ExecStart=/cync2mqtt/bin/cync2mqtt --log-level DEBUG /config/cync2mqtt/cync_mesh.yaml
 Restart=always
 User=root
 

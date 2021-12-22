@@ -21,7 +21,7 @@
     "services": [
       "mqtt:need"
     ],
-    "slug": "cync2mqtt-docker (alpha)",
+    "slug": "cync2mqtt-docker",
     "upstream": "0.1a",
     "url": "https://github.com/zimmra/cync2mqtt-docker",
     "version": "0.1a"

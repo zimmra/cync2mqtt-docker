@@ -15,14 +15,14 @@
     ],
     "description": "Home Assistant Community Add-on for Cync Devices",
     "map": ["config:rw", "share:rw"],
-    "name": "cync2mqtt",
+    "name": "cync2mqtt-docker (alpha)",
     "options": {},
     "schema": {},
     "services": [
       "mqtt:need"
     ],
-    "slug": "cync2mqtt",
-    "upstream": "dev.18",
+    "slug": "cync2mqtt-docker (alpha)",
+    "upstream": "0.1a",
     "url": "https://github.com/zimmra/cync2mqtt-docker",
-    "version": "dev.18"
+    "version": "0.1a"
   }

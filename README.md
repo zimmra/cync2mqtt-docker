@@ -1,2 +1,7 @@
 cync2mqtt in docker configured for HASS-OS
-### I wouldn't use this if I were you. It currently works for me, but was quickly hacked together on breaks at work. My HASS Addon experience is essentially 0, as is my DOCKERFILE understanding. At bare minimum, it is super sloppy with lots of vestigial elements from the project I forked this from. At worst it will inhibit your HASS instance. 
+### This is very scrapily put together/MVP/alpha for https://github.com/juanboro/cync2mqtt running in a docker container/Home Assistant addon. 
+
+Currently pulls cync2mqtt via git then builds, future versions may store source within same repo. 
+
+Currently you need to generate your cync_mesh.yaml configuration outside of this addon, it currently is to go in your config directory at /config/cync2mqtt/cync_mesh.yaml.
+In the future I hope to implement configuration generation within the addon. 
